@@ -27,3 +27,5 @@ fetch("https://fakestoreapi.com/products")
       productsList.appendChild(li);
     });
   });
+
+  console.log('minha pika');
