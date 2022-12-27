@@ -170,13 +170,13 @@
 
 @media (max-width: 450px) {
   .products-list {
-    justify-content: left;
-    gap: 10px;
+    justify-content: space-around;
+    /* gap: 20px; */
   }
 
   .products-list li .product-image {
-    width: 100px;
-    height: 100px;
+    width: 110px;
+    height: fit-content;
   }
 
   .products-list li .product-button button {
