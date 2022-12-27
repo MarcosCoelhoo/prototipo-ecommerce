@@ -1,0 +1,87 @@
+header {
+  background: #2192ff;
+  padding: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .header-logo {
+  font-family: "Plus Jakarta Sans";
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+}
+
+header .header-logo span {
+  color: #22577a;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  font-size: 0.8rem;
+  text-decoration: none;
+  font-family: "inter";
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  background: #22577a;
+  padding: 7px;
+  border-radius: 3px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+header nav a:hover {
+  background: #05253a;
+}
+
+header nav a i {
+  font-size: 1rem;
+}
+
+#button-cart:after {
+  content: "3";
+  font-size: 0.6rem;
+  background: #22577a;
+  padding: 0.2rem 0.4rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  position: absolute;
+  top: -7px;
+  right: -8px;
+}
+
+header nav a[data-page="true"] {
+  background: #05253a;
+  pointer-events: none;
+}
+
+header nav #button-cart[data-page="true"]:after {
+  background: #05253a;
+}
+
+@media (max-width: 800px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  header .header-logo {
+    font-size: 1.3rem;
+  }
+
+  header nav a {
+    font-size: 0.6rem;
+  }
+
+  header nav a i {
+    font-size: 0.7rem;
+  }
+}

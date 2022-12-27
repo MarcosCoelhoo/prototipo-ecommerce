@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.section-page {
+  padding: 15px 40px;
+}
+
+.section-page .section-title {
+  font-family: "Plus Jakarta Sans";
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #22577a;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .section-page {
+    padding: 15px 20px;
+  }
+}

@@ -14,8 +14,8 @@
 
   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css">
 
-  <script type="text/javascript" src="./script.js" defer></script>
-  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./assets/js/script.js" defer></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <title>Ecommerce</title>
 
@@ -27,15 +27,16 @@
       <h1 class="header-logo"><span>My</span>Store</h1>
     </a>
     <nav>
-      <a href="#">Cart<i class="fi fi-rr-shopping-cart"></i></a>
-      <a href="#">Account<i class="fi fi-rr-user"></i></a>
+      <a id="button-cart" data-page="false" href="./pages/cart.html">Cart<i class="fi fi-rr-shopping-cart"></i></a>
+      <a id="button-account" data-page="false" href="#">Account<i class="fi fi-rr-user"></i></a>
     </nav>
   </header>
 
   <main>
-    <h2 class="section-title">recommended for you</h2>
-    <ul class="products-list">
-      <!-- <li>
+    <section class="section-page products">
+      <h2 class="section-title">recommended for you</h2>
+      <ul class="products-list">
+        <!-- <li>
         <div class="product-image">
           <img
             src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
@@ -52,7 +53,8 @@
           </div>
         </div>
       </li> -->
-    </ul>
+      </ul>
+    </section>
   </main>
 
 </body>
