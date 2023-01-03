@@ -1,24 +1,24 @@
-export default function initProductsCart() {}
+export default function initProductsCart() {
+  if (window.location.href.includes("cart")) {
+    const listCart = document.querySelector(".products-cart");
+    let totalPrice = 0;
 
-const listCart = document.querySelector(".products-cart");
-let totalPrice = 0;
+    async function productsCart() {
+      const jsonCart = await (
+        await fetch("https://fakestoreapi.com/carts")
+      ).json();
+      const productsTotalPrice = document.querySelector(".products-footer h3");
 
-async function productsCart() {
-  const jsonCart = await (await fetch("https://fakestoreapi.com/carts")).json();
-  const productsTotalPrice = document.querySelector(".products-footer h3");
+      await new Promise((resolve) => {
+        jsonCart[5].products.forEach((item) => {
+          fetch(`https://fakestoreapi.com/products/${item.productId}`)
+            .then((r) => r.json())
+            .then((product) => {
+              const li = document.createElement("li");
+              totalPrice += product.price;
+              productsTotalPrice.innerText = `Total: $ ${totalPrice}`;
 
-  await new Promise((resolve) => {
-    jsonCart[1].products.forEach((item) => {
-      console.log(item.productId);
-      fetch(`https://fakestoreapi.com/products/${item.productId}`)
-        .then((r) => r.json())
-        .then((product) => {
-          console.log(product);
-          const li = document.createElement("li");
-          totalPrice += product.price;
-          productsTotalPrice.innerText = `Total: $ ${totalPrice}`;
-
-          li.innerHTML = `
+              li.innerHTML = `
           <div class="product-image">
           <img src="${product.image}" alt="${product.title}" width="300px">
         </div>
@@ -34,9 +34,11 @@ async function productsCart() {
         </div>
           `;
 
-          listCart.appendChild(li);
+              listCart.appendChild(li);
+            });
         });
-    });
-  });
+      });
+    }
+    productsCart();
+  }
 }
-productsCart();

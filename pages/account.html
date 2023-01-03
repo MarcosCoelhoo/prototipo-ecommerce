@@ -17,10 +17,10 @@
   <script type="module" src="../assets/js/script.js" defer></script>
 
   <link rel="stylesheet" href="../assets/css/style.css">
-  <title>Cart MyStore</title>
+  <title>My Account</title>
 </head>
 
-<body id="cart">
+<body id="account">
   <header>
     <a href="../index.html">
       <h1 class="header-logo"><span>My</span>Store</h1>
@@ -32,17 +32,36 @@
   </header>
 
   <main>
-    <section class="section-page cart">
-      <ul class="products-cart">
+    <section class="section-page account">
+      <div class="account-header">
+        <div class="header-image">
+          <img
+            src="https://images.unsplash.com/photo-1622281550374-f04972a729e8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+            alt="">
+        </div>
+        <div class="header-content">
+          <h1 class="content-name" data-name="">loading...</h1>
+          <p class="content-email" data-email="">loading...</p>
+        </div>
+      </div>
 
-
-      </ul>
-      <div class="products-footer">
-        <h3>$ 0</h3>
-        <button>Buy</button>
+      <div class="account-info">
+        <div class="info-box address">
+          <h3 class="box-title">Address</h3>
+          <p data-city="">loading...</p>
+          <p data-street="">loading...</p>
+          <p data-num="">loading...</p>
+          <p data-zip="">loading...</p>
+        </div>
+        <div class="info-box contact">
+          <h3 class="box-title">Contact</h3>
+          <p data-email="">loading...</p>
+          <p data-phone="">loading...</p>
+        </div>
       </div>
     </section>
   </main>
+
 </body>
 
 </html>

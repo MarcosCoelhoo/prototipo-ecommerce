@@ -1,8 +1,10 @@
-import initGetProducts from "./modules/get-products.js";
+import initProducts from "./modules/products.js";
 import initProductsCart from "./modules/products-cart.js";
+import initAccountInfo from "./modules/account.js";
 
-initGetProducts();
+initProducts();
 initProductsCart();
+initAccountInfo();
 
 const btnsHeader = document.querySelectorAll("header nav a");
 

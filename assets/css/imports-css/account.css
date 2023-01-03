@@ -1,0 +1,100 @@
+.account-header {
+  margin-bottom: 40px;
+}
+
+.account-header .header-image {
+  width: 230px;
+  height: fit-content;
+  margin: 0 auto;
+}
+
+.account-header .header-image img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.header-content .content-name {
+  font-family: "Inter";
+  font-size: 2.2rem;
+  letter-spacing: 1.3px;
+  text-transform: capitalize;
+  color: #050c3b;
+}
+
+.header-content .content-email {
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.9rem;
+  letter-spacing: 1.3px;
+  color: #21274d;
+}
+
+.account-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 60px;
+}
+
+.account-info .info-box {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  flex: 300px;
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 10px 83px -42px rgba(0, 0, 0, 0.75);
+  padding: 13px;
+}
+
+.account-info .info-box .box-title {
+  font-family: "Inter";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #050c3b;
+  margin-bottom: 10px;
+}
+
+.account-info .info-box p {
+  font-family: "Plus Jakarta Sans";
+  font-size: 0.9rem;
+}
+
+.account-info .info-box.address p {
+  text-transform: capitalize;
+}
+
+@media (max-width: 800px) {
+  .account-header .header-image {
+    width: 180px;
+  }
+
+  .account-info {
+    gap: 20px;
+  }
+
+  .account-info .info-box .box-title {
+    font-size: 1.1rem;
+  }
+
+  .account-info .info-box p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .account-header .header-image {
+    width: 150px;
+  }
+
+  .account-header .header-content .content-name {
+    font-size: 1.6rem;
+  }
+
+  .account-header .header-content .content-email {
+    font-size: 0.8rem;
+  }
+}
